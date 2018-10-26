@@ -23,18 +23,13 @@ int main(int argc, char* argv[])
 	
 	while(1)
 	{
-		
+		printf("Hit Enter to receive data from Server::");
 		fgets(buf,100,stdin);
 		result = send(sockid, buf, 256, 0);
 		result = recv(sockid, buf, 256, 0);
-
-		printf("SERVER: %s", buf);	
-		printf("Type Here: ");
+		printf("Data Received from Server--> %s", buf);	
 	}
-	//close(c_address);	
 	exit(0);
-
-
 	return 0;
 }
 

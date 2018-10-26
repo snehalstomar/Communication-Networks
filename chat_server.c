@@ -29,18 +29,12 @@ int main(int argc, char* argv[])
 	{
 		result = recv(sockid, buf, 256, 0);
 
-		printf("CLIENT: %s", buf);	
-		printf("Type Here: ");
+		printf("key-in data to be sent to client:");
         fgets(buf,100,stdin);
 
         result = send(new_sockid, buf, 256, 0);
-
-
 	}
-	//close(c_address);	
 	exit(0);
-
-
 	return 0;
 }
 
